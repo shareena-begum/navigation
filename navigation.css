@@ -8,7 +8,7 @@ body {
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
     display: block;
 }
 
@@ -38,6 +38,11 @@ a:focus{
 
 strong {
     font-weight: 700;
+    
+}
+
+.trees {
+    color: green;
 }
 
 .subtitle{
@@ -76,6 +81,7 @@ strong {
     max-width: 900px;
     margin: 0 auto;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 
@@ -86,23 +92,24 @@ header {
     text-align: center;
     background: rgb(243, 237, 237);
     padding: 50px;
+    text-align: center;
 }
 
-main {
-    width: 75%;
-}
 
-aside {
-    width: 20%;
-}
 
-@media (max-width:675px){
+@media (min-width:675px){
     .container {
-        flex-direction: column;
+      flex-direction: row;  
     }
-    header {
-        text-align: center;
+    main {
+        width: 70%;
     }
+    
+    aside {
+        width: 25%;
+        /* min-width: 200px;
+        margin-left:1em; */
+    }  
 }
 
 /* navigation */
@@ -150,9 +157,102 @@ nav a:focus {
     }
 }
 
+/* articles */
+
+.article-info {
+    margin: 2em 0;
+}
+.article-featured {
+    border-bottom: 1px solid black;
+    margin-bottom: 2em;
+    padding-bottom: 2em;
+}
+
+.article-recent{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+
+.article-recent-main {
+    order: 1;
+}
+
+.article-recent-secondary {
+    order: 2;
+}
 
 
-article-image {
-    width: 
+/* styling recent articles for large screen */
 
+@media (min-width:675px) {
+    .article-recent {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .article-recent-main {
+        width: 65%;
+        order: 2;
+    }
+    .article-recent-secondary {
+        width: 30%;
+        order: 1;
+    }
+    .article-featured {
+        display: flex;
+        flex-direction: column;
+    }
+    .article-image {
+        order: -2;
+        margin-top: 1em;
+    }
+    .article-info {
+        order: -1;
+    }
+}
+
+/* widget */
+
+.widget-title,
+.widget-recent-post-title {
+    font-size: 1rem;
+}
+.widget-title {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+}
+
+.sidebar-widget {
+    border: 20px solid rgb(243, 237, 237);
+    margin-bottom: 2em;
+    margin-top: 1em;
+    padding: 1em;
+}
+
+.widget-recent-post {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid black;
+    margin-bottom: 1em;
+}
+
+.widget-recent-post-title {
+    order : 2;
+}
+
+.widget-image {
+    order : 1;
+}
+
+
+.widget-recent-post:last-child {
+    border:0;
+    margin:0;
+}
+
+footer {
+    background: #631caa;
+    color: white;
+    text-align: center;
+    padding: 2em 0;
 }
