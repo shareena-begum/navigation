@@ -217,6 +217,7 @@ nav a:focus {
 .widget-title,
 .widget-recent-post-title {
     font-size: 1rem;
+    line-height: 1.4;
 }
 .widget-title {
     font-family: 'Ubuntu', sans-serif;
