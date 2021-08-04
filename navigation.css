@@ -66,6 +66,8 @@ strong {
     color:#f87cf8;
     text-decoration: none;
     font-weight: 700;
+    text-transform: uppercase;
+    
 }
 
 .article-read-more:hover,
