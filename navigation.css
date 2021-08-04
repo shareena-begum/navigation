@@ -67,7 +67,7 @@ strong {
     text-decoration: none;
     font-weight: 700;
     text-transform: uppercase;
-    
+    letter-spacing: 1px ;
 }
 
 .article-read-more:hover,
@@ -128,12 +128,15 @@ nav ul {
 nav li {
     /* border: 2px dotted orange; */
     margin-left: 2em;
+    
 }
 
 nav a{
  text-decoration: none;
  color: #631caa;
  font-weight: 700;
+ text-transform: uppercase;
+ letter-spacing: 1px;
  padding: .25em 0;
     /* border: 2px solid green; */
 }
@@ -224,6 +227,7 @@ nav a:focus {
 .widget-title {
     font-family: 'Ubuntu', sans-serif;
     font-weight: 700;
+    letter-spacing: 1px;
 }
 
 .sidebar-widget {
